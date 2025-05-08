@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "satellite-tracker"
+version = "1.0.0"
+description = "Real-time satellite tracking and orbit prediction system"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Mehmet Demir"}
+]
+
+keywords = ["satellite", "tracking", "orbit", "skyfield", "TLE", "space"]
+
+dependencies = [
+    "skyfield>=1.45",
+    "numpy>=1.24.0",
+    "plotly>=5.18.0",
+    "streamlit>=1.29.0",
+    "requests>=2.31.0",
+    "pandas>=2.0.0",
+    "pytz>=2023.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
